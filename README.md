@@ -99,6 +99,8 @@ Go to your action-repo → Settings → Webhooks → Add webhook:
 
 And create a Webhook.
 
+(Note: action-repo is the repo on which you want to implement event tracking.)
+
 ---
 
 ## 🧑‍🎨 Client Setup (React UI)
