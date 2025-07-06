@@ -20,13 +20,13 @@ This repository contains:
 
 ## 🐍 Server Setup (Flask API)
 
-### 1. Clone the repo
+### 1. Clone the repo:
 
 ```bash
 git clone https://github.com/rohanbabbar983/webhook-repo.git
 cd webhook-repo
 ```
-### 2. Create and activate virtual environment
+### 2. Create and activate virtual environment:
 
 ```bash
 pip install virtualenv
@@ -37,23 +37,24 @@ source venv/bin/activate
 # On Windows:
 venv\Scripts\activate
 ```
-### 3. Install Dependencies
+### 3. Install Dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Setup .env file
+### 4. Setup .env file:
 
 ```bash
 MONGO_URI=mongodb+srv://username:password@cluster0.mongodb.net/githubEvents?retryWrites=true&w=majority
 ```
 
-### 5. Run Flask Server
+### 5. Run Flask Server:
 
 ```bash
 python run.py
 ```
+
 By default it runs at: http://localhost:5000
 
 ---
@@ -72,17 +73,19 @@ ngrok http 5000
 https://abc123.ngrok.io (for example)
 ```
 
-### 3. Set Webhook in GitHub
+### 3. Set Webhook in GitHub:
 
 Go to your action-repo → Settings → Webhooks → Add webhook:
 
-Payload URL: https://abc123.ngrok.io/webhook/receiver (for example)
+- Payload URL: https://abc123.ngrok.io/webhook/receiver (for example)
 
-Content type: application/json
+- Content type: application/json
 
-Events: Just the individual events (Push, Pull Request)
+- Events: Just the individual events (Push, Pull Request)
 
-Secret: (leave blank unless you validate signatures)
+- Secret: (leave blank unless you validate signatures)
+
+And create a webhook.
 
 ---
 
@@ -91,27 +94,30 @@ Secret: (leave blank unless you validate signatures)
 ### 1. Go to client folder:
    
 ```bash
-cd webhook-repo  # or cd client if separate folder
+cd client 
 ```
 
 ### 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
-4. Configure Server API Base URL:
-Create .env:
+### 3. Configure Server API Base URL:
 
 ```env
 VITE_API_BASE_URL=http://localhost:5000
 ```
 
-4. Run frontend
+### 4. Run frontend:
+
 ```bash
 npm run dev
 ```
 
 By default it runs at: http://localhost:5173
+
+---
 
 
 
