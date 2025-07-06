@@ -18,7 +18,7 @@ This repository contains:
 
 ---
 
-## 🐍 Backend Setup (Flask API)
+## 🐍 Server Setup (Flask API)
 
 ### 1. Clone the repo
 
@@ -56,7 +56,9 @@ python run.py
 ```
 By default it runs at: http://localhost:5000
 
-## Webhook Setup using Ngrok (for local testing)
+---
+
+## 🌐 Webhook Setup using Ngrok (for local testing)
 
 ### 1. Install and run Ngrok:
 
@@ -81,4 +83,35 @@ Content type: application/json
 Events: Just the individual events (Push, Pull Request)
 
 Secret: (leave blank unless you validate signatures)
+
+---
+
+## 🧑‍🎨 Client Setup (React UI)
+
+### 1. Go to client folder:
+   
+```bash
+cd webhook-repo  # or cd client if separate folder
+```
+
+### 2. Install dependencies:
+```bash
+npm install
+```
+
+4. Configure Server API Base URL:
+Create .env:
+
+```env
+VITE_API_BASE_URL=http://localhost:5000
+```
+
+4. Run frontend
+```bash
+npm run dev
+```
+
+By default it runs at: http://localhost:5173
+
+
 
