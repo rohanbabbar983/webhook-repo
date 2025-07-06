@@ -17,26 +17,38 @@ This repository contains:
 - Icons, branch formatting, author highlights, and loading UI
 
 ---
+## 📍 Repo Setup ( Client + Server )
 
-## 🐍 Server Setup (Flask API)
+### 1. Install and Setup Git.
 
-### 1. Clone the repo:
+### 2. Clone the repo:
 
 ```bash
 git clone https://github.com/rohanbabbar983/webhook-repo.git
-cd webhook-repo
 ```
+---
+
+## 🐍 Server Setup (Flask API)
+
+### 1. Open a terminal & Go to Server folder:
+
+```bash
+cd server
+```
+
 ### 2. Create and activate virtual environment:
 
 ```bash
 pip install virtualenv
 virtualenv venv
+
 # Activate:
 # On Linux/macOS:
 source venv/bin/activate
 # On Windows:
 venv\Scripts\activate
 ```
+
 ### 3. Install Dependencies:
 
 ```bash
@@ -61,7 +73,7 @@ By default it runs at: http://localhost:5000
 
 ## 🌐 Webhook Setup using Ngrok (for local testing)
 
-### 1. Install and run Ngrok:
+### 1. Open a new terminal and run Ngrok (After installing):
 
 ```bash
 ngrok http 5000
@@ -85,13 +97,13 @@ Go to your action-repo → Settings → Webhooks → Add webhook:
 
 - Secret: (leave blank unless you validate signatures)
 
-And create a webhook.
+And create a Webhook.
 
 ---
 
 ## 🧑‍🎨 Client Setup (React UI)
 
-### 1. Go to client folder:
+### 1. Open a new terminal & Go to client folder:
    
 ```bash
 cd client 
