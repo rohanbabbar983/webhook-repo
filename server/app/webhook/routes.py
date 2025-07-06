@@ -11,9 +11,6 @@ def receiver():
 
     if not event_type or not payload:
         return {"error": "Invalid payload"}, 400
-    
-    print("Mongo DB:", mongo.db)
-
 
     document = {
         "request_id": None,
@@ -55,14 +52,9 @@ def receiver():
     # If document is valid, insert
     if document["action"]:
         try:
-            print("Mongo DB before save:", mongo.db)
             mongo.db.events.insert_one(document)
-            print("Mongo DB after save:", mongo.db)
-
             return jsonify({"status": "stored", "data": document}), 200
         except Exception as e:
-            print("Mongo DB in exception:", mongo.db)
-
             return jsonify({"error": str(e)}), 500
 
     return jsonify({"status": "ignored"}), 200
