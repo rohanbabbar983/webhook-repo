@@ -1,4 +1,4 @@
-# 📡 GitHub Webhook Receiver – Dev Assessment
+# 📡 GitHub Webhook Receiver
 
 This repository contains:
 
@@ -23,7 +23,7 @@ This repository contains:
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/webhook-repo.git
+git clone https://github.com/rohanbabbar983/webhook-repo.git
 cd webhook-repo
 ```
 ### 2. Create and activate virtual environment
